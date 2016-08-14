@@ -1,14 +1,15 @@
 $(document).ready(function() {
 
-    var $answerBox = $('.answerBox');
+    var $answerBox = $('.answerBox'); //answerBox is both an input and display
 
-    var numOne;
-    var numTwo;
-    var operator;
+    // the three following variables will be used to create an object to send via AJAX
+    var numOne; // this will be used to store the first number
+    var numTwo; // this will be used to store the second number
+    var operator; // this will be used to store the operator
 
 
 
-    clearAnswerBox();
+    clearAnswerBox(); // calling this here will automatically have the display/input become 0
 
     // ======================
     //      Reset button
