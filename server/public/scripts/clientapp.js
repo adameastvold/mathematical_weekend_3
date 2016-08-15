@@ -56,7 +56,9 @@ $(document).ready(function() {
         $answerBox.val('0');
     });
 
-    //equals
+    // =================================================================
+    //      EQUALS FUNCTION WHICH INCLUDES OBJECT BUILDING AND AJAX
+    // =================================================================
 
     $('#equals').on('click', function() {
 
@@ -76,6 +78,7 @@ $(document).ready(function() {
             operatorName = 'multiplying'
         };
 
+        //  OBJECT TO SEND
 
         var dataSend = {
             firstNumber: numOne,
@@ -84,7 +87,9 @@ $(document).ready(function() {
         };
 
         console.log(dataSend);
+
         //      POST AJAX CALL
+
         $.ajax({
             type: 'POST',
             url: '/' + operatorName,
@@ -100,6 +105,7 @@ $(document).ready(function() {
             type: "GET",
             url: "/" + operatorName,
             success: function(result) {
+                console.log('information received!!')
                 $answerBox.val(result);
             }
         });
